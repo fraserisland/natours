@@ -1,8 +1,42 @@
 /*
 COLORS:
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+Light green: rgb(102, 158, 255)
+Medium green: rgb(52, 103, 188)
+Dark green: rgb(0, 41, 109)
 
 */
+
+/*  *{} selects every element on the page. */
+/* setting these attributes essentially alows us to start fresh */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* so every element can inherit the following: */
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header {
+    /* 95% of the viewport height */
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+         rgb(102, 158, 255, 0.8), 
+         rgb(0, 41, 109,0.8)), 
+         url(../img/hero.jpg);
+    /* whatever the width, it will always try fit the element in the box */
+    background-size: cover;
+    background-position: top;
+    /* for bottom clipping from header image  topLeft, topRight, bottomRight, bottomLeft*/
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%)
+}
